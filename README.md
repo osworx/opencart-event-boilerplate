@@ -32,7 +32,7 @@ With the publishing of Opencart version 4.x, both - VQMod and OCMod - are remove
 But the usage is not recommended, because the same functionalities offer **events**
 
 # events
-**events** will basically do the same as **VQMod** or **OCMod**, but compared to both, the modifications (the edited files) are stored in the database instead of new files in your folder system.
+**Events** will basically do the same as **VQMod** or **OCMod**, but compared to both, the modifications (the edited files) are stored in the database instead of new files in your folder system.
 The system itself checks with every call this database and fetch the stored code - the original files will be untouched.
 The problem now will be, if (the basically non-exisisting) VQ- or OCMod modification system (which have to be installed additionally) are used together with events, the system will have troubles and the result will be not that you expect.
 ***Therefore it is recommended to use events only.***
@@ -47,8 +47,8 @@ And to be true, some *developers* did not really understand how both are really 
 With an event, only a few lines of code are required.
 Beside this, what needs an event to become activ?
 
-## event structure
-Basically it will be the same as every extension. It consists of 3 files minimum.
+## Events Structure
+Basically it will be the same as every other extension. It consists at least of 3 files minimum.
 
 ### controller
 The main file, will contain all actions needed. And the most important, the event itself (which is called by a **trigger**).
@@ -82,6 +82,7 @@ Described already above.
 
 ## language (en-gb)
 The translation we use in the extension.
+Can be translated into any language on demand.
 
 ## view
 The output we use at the extension settings page.
