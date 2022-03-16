@@ -78,13 +78,13 @@ To accomplish this, we use an event (this extension you can download via the rel
 The event (the extension) exists of 3 files:
 
 ## controller
-Described already above
+Described already above.
 
 ## language (en-gb)
-The translation we use in the extension
+The translation we use in the extension.
 
 ## view
-The output we use at the extenson settings page.
+The output we use at the extension settings page.
 
 # How to install
 
