@@ -4,6 +4,9 @@ A simple boilerplate for how to use events in OpenCart (versions 2.x and 3.x) ht
 For **OpenCart 3.x** please go to:
 https://github.com/osworx/opencart-event-boilerplate/tree/OpenCart-3.x
 
+For **OpenCart 2.x** please go to:
+https://github.com/osworx/opencart-event-boilerplate/tree/OpenCart-2.x
+
 # What is an event?
 An **event** is a way to manipulate files - no matter if for the backend (=administration area) or the frontend (= the Webshop).
 Events are introduced with OpenCart version 2.x, enhanced with v.3.x and will be the preferred (and only) method to edit files when OpenCart 4.x will be published.
