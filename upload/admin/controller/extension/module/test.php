@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: test.php 2022-3-16 11:44Z mic $
+ * @version		$Id: test.php 2022-3-16 12:37Z mic $
  * @package		Boilerplate for event in OpenCart 3.x
  * @author		mic - https://osworx.net
  * @copyright		2022 OSWorX
@@ -9,7 +9,7 @@
 
 class ControllerExtensionModuleTest extends Controller
 {
-	public $_version	= '1.0.1';
+	public $_version	= '1.0.2';
 
 	private $_extension	= 'module_test';
 	private $_route		= 'extension/module/test';
@@ -140,7 +140,7 @@ class ControllerExtensionModuleTest extends Controller
 			}
 
 			// standard redirect (when form has no "apply button")
-			$this->response->redirect( $this->url->link( $this->_route, '&user_token=' . $this->session->data['user_token'], true ) );
+			$this->response->redirect( $this->url->link( 'extension/extension&type=module', '&user_token=' . $this->session->data['user_token'], true ) );
 		}
 
 		// set the documents title
@@ -166,7 +166,7 @@ class ControllerExtensionModuleTest extends Controller
 
 		// define the 2 action buttons, note: apply is done inside the template via javascript
 		$data['action']	= $this->url->link( $this->_route, 'user_token=' . $this->session->data['user_token'], true );
-		$data['cancel']	= $this->url->link( 'extension/extension/module', 'user_token=' . $this->session->data['user_token'], true );
+		$data['cancel']	= $this->url->link( 'extension/extension&type=module', 'user_token=' . $this->session->data['user_token'], true );
 
 		// add / define here further values we need in the template
 		$data['_route']		= $this->_route;
