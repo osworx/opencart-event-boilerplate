@@ -139,11 +139,11 @@ class ControllerExtensionModuleTest extends Controller
 
 			// redirects directly to the form (form must have an "apply" button)
 			if( isset( $this->request->post['mode'] ) ) {
-				$this->response->redirect( $this->url->link( $this->_route, '&user_token=' . $this->session->data['user_token'], true ) );
+				$this->response->redirect( $this->url->link( $this->_route, '&token=' . $this->session->data['token'], true ) );
 			}
 
 			// standard redirect (when form has no "apply button")
-			$this->response->redirect( $this->url->link( 'extension/extension/module', '&user_token=' . $this->session->data['user_token'], true ) );
+			$this->response->redirect( $this->url->link( 'extension/extension/module', '&token=' . $this->session->data['token'], true ) );
 		}
 
 		// set the documents title
@@ -168,12 +168,12 @@ class ControllerExtensionModuleTest extends Controller
 		}
 
 		// define the 2 action buttons, note: apply is done inside the template via javascript
-		$data['action']	= $this->url->link( $this->_route, 'user_token=' . $this->session->data['user_token'], true );
-		$data['cancel']	= $this->url->link( 'extension/extension/module', 'user_token=' . $this->session->data['user_token'], true );
+		$data['action']	= $this->url->link( $this->_route, 'token=' . $this->session->data['token'], true );
+		$data['cancel']	= $this->url->link( 'extension/extension/module', 'token=' . $this->session->data['token'], true );
 
 		// add / define here further values we need in the template
-		$data['_route'] = $this->_route;
-		$data['user_token'] = $this->session->data['user_token'];
+		$data['_route']	= $this->_route;
+		$data['token']	= $this->session->data['token'];
 
 		// get config values
 		$this->getConfig( $data );
@@ -256,15 +256,15 @@ class ControllerExtensionModuleTest extends Controller
     	$data['breadcrumbs'] = [
 			[
 				'text'	=> $this->language->get( 'text_home' ),
-				'href'	=> $this->url->link( 'common/dashboard', 'user_token=' . $this->session->data['user_token'], true )
+				'href'	=> $this->url->link( 'common/dashboard', 'token=' . $this->session->data['token'], true )
 			],
 			[
 				'text'	=> $this->language->get( 'text_extension' ),
-				'href'	=> $this->url->link( 'extension/extension&type=module', 'user_token=' . $this->session->data['user_token'], true )
+				'href'	=> $this->url->link( 'extension/extension&type=module', 'token=' . $this->session->data['token'], true )
 			],
 			[
 				'text'	=> $this->language->get( 'heading_title' ),
-				'href'	=> $this->url->link( $this->_route, 'user_token=' . $this->session->data['user_token'], true )
+				'href'	=> $this->url->link( $this->_route, 'token=' . $this->session->data['token'], true )
 			]
 		];
 	}
@@ -279,9 +279,9 @@ class ControllerExtensionModuleTest extends Controller
 	 */
 	private function getChildren( &$data ) {
 		$data += [
-			'header'		=> $this->load->controller( 'common/header' ),
+			'header'	=> $this->load->controller( 'common/header' ),
 			'column_left'	=> $this->load->controller( 'common/column_left' ),
-			'footer'		=> $this->load->controller( 'common/footer' )
+			'footer'	=> $this->load->controller( 'common/footer' )
 		];
 	}
 
