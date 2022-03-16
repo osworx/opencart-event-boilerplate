@@ -72,7 +72,7 @@ triggers are base functions of the core, for example to add a new user for the a
 inside the model 
 ***class ModelUserUser extends Model {***
 
-# What is this extension doing
+# What this event extension is doing
 We want, that the system sends automatically each time a new user (e.g. an admin, an editor, a further manager) is created, an email to this new user - with his login data.
 To accomplish this, we use an event (this extension you can download via the release page).
 The event (the extension) exists of 3 files:
