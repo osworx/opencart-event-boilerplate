@@ -109,3 +109,12 @@ The whole code is ready for php 8.1.x (and of course previous php versions).
 
 If you find an error or bug, make a PR (Pull Request).
 Also if you have an improvement.
+
+###Note
+Because this extension has only 3 files, is installed as an extension, no install.xml file is needed.
+***install.xml*** was used earlier with the above mentioned extensions (VQMod and OCMod). 
+Inside this file are the ***instructions*** what and how to modify.
+
+Because this is an event only, and ***modifications*** are done by this method, the former install.xml is not needed anymore.
+Though it could be added, because if it does not exist, the list of installed extensions will not contain this extension.
+I leave it up to you if you want to use such a file.
