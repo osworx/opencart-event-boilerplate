@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: test.php 2022-3-14 21:21Z mic $
+ * @version		$Id: test.php 2022-3-16 11:44Z mic $
  * @package		Boilerplate for event in OpenCart 3.x
  * @author		mic - https://osworx.net
  * @copyright		2022 OSWorX
@@ -9,7 +9,7 @@
 
 class ControllerExtensionModuleTest extends Controller
 {
-	public $_version	= '1.0.0';
+	public $_version	= '1.0.1';
 
 	private $_extension	= 'module_test';
 	private $_route		= 'extension/module/test';
@@ -25,14 +25,14 @@ class ControllerExtensionModuleTest extends Controller
 	 * what it does:	event to be called after creating a new user to send an email to this user
 	 * event values:
 	 * code:    		ox_test_admin_add_user	unique identifier
-	 * trigger: 		admin/model/user/user	which action trigger the action
-	 * action:  		extension/module/test/eventModelCustomerCustomerAddCustomerAfter
+	 * trigger: 		admin/model/user/user/addUser/after	which function shall be triggered an when (after or before)
+	 * action:  		extension/module/test/eventModelUserUserAddUserAfter (see function below)
 	 *
 	 * @param string    $route      the current called route, not used here
 	 * @param array     $args       array with all needed values
 	 * @param string    $output     not used here (=parsed template) - only available when after method is used
 	 */
-	public function eventModelCustomerCustomerAddCustomerAfter( &$route, &$args, &$output = null ) {
+	public function eventModelUserUserAddUserAfter( &$route, &$args, &$output = null ) {
 		// check if extension is enabled
 		if( $this->config->get( $this->_extension . '_status' ) ) {
 			// check if variable is set and check
