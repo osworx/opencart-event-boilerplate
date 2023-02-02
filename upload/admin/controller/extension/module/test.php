@@ -318,8 +318,8 @@ class ControllerExtensionModuleTest extends Controller
 			// admin
 			[
 				'code'		=> 'ox_test_admin_add_user',
-				'trigger'	=> 'admin/model/user/user',
-				'action'	=> '/eventModelCustomerCustomerAddCustomerAfter'
+				'trigger'	=> 'admin/model/user/user/addUser/after',
+				'action'	=> '/eventModelUserUserAddUserAfter'
 			]
 			// add here further parts when needed
 		];
